@@ -35,7 +35,76 @@ A aplicação utilizada nos testes é o [SauceDemo](https://www.saucedemo.com/).
 - [GitHub Actions](https://github.com/features/actions)
 
 ---
+## Execução local
 
+Siga os passos abaixo para executar o projeto em sua máquina.
+
+### 1. Clone o repositório
+
+### 2. Acesse o diretório do projeto
+
+```bash
+cd playwright-e2e-framework
+```
+
+### 3. Instale as dependências
+
+```bash
+npm install
+```
+
+### 4. Instale os navegadores do Playwright
+
+```bash
+npx playwright install
+```
+
+Para instalar somente o Chromium:
+
+```bash
+npx playwright install chromium
+```
+
+### 5. Execute os testes
+
+```bash
+npx playwright test
+```
+
+### Execução rápida
+
+Para uma instalação e execução padrão:
+
+```bash
+npm install
+npx playwright install
+npx playwright test
+```
+
+### Executar os testes visualizando o navegador
+
+```bash
+npx playwright test --headed
+```
+
+### Executar os testes em modo de depuração
+
+```bash
+npx playwright test --debug
+```
+
+### Executar um arquivo específico
+
+```bash
+npx playwright test tests/checkout.spec.ts
+```
+
+### Executar um teste específico
+
+```bash
+npx playwright test -g "CHECKOUT-001"
+```
+---
 ## Arquitetura do projeto
 
 O projeto utiliza uma organização baseada em responsabilidades, separando os
